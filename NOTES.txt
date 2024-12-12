@@ -1,0 +1,43 @@
+TASK - 6 :Store user details and send email for each registration , login API also done .
+DATABASE NAME : mailer
+Table Name : users
+
+This Task is a Node.js app with MySQL for managing user registration and login. 
+User details are stored in a users table, including fields like username, email, and hashed passwords (using bcrypt).
+Registration triggers a confirmation email via Nodemailer using Gmail SMTP. 
+The app includes two endpoints: one for registration (saves user data and sends an email) and 
+another for login (validates email and password). 
+It uses environment variables for sensitive credentials.
+MySQL handles data storage, while the app ensures secure authentication and email functionality.
+The project is modular, with separate controllers, routes, and utilities.
+
+Registration Endpoint : http://localhost:7000/api/auth/register
+
+method :POST
+
+JSON FORMAT :
+
+{
+  "username": "Sanjay Ravichandran",
+  "email": "2232j31@kgcas.com",
+  "password": "123456",
+  "course": "Msc software systems",
+  "college": "KGCAS",
+  "city": "coimbatore",
+  "state": "Tamilnadu",
+  "country": "India"
+}
+
+Login Endpoint : http://localhost:7000/api/auth/login
+
+method :POST
+
+JSON FORMAT :
+ {
+    "email": "2232j31@kgcas.com",
+    "password": "123456"
+ }
+
+
+*****************************************************************************************
+
